@@ -8,6 +8,7 @@ import App from '/imports/ui/App.vue';
 // plugins
 import '/imports/plugins/vue-meteor-tracker';
 import '/imports/plugins/events-bus';
+import '/imports/plugins/vue-meta';
 
 if (process.env.NODE_ENV === 'production') {
   Vue.config.devtools = false;
@@ -26,6 +27,7 @@ function CreateApp() {
       ...App,
     }),
     router,
+    store,
   };
 }
 

@@ -2,15 +2,24 @@ import { VueSSR } from 'meteor/akryum:vue-ssr';
 import CreateApp from '/imports/app';
 
 VueSSR.createApp = function (context) {
-  const { app, router } = CreateApp();
-  // Set the url in the router
-  router.push(context.url);
+  return new Promise(resolve => {
+    const { app, router } = CreateApp();
 
-  // Called when Vue app has finished rendering
-  context.rendered = () => {
-    // Inject some arbitrary JS
-    context.js = `console.log('hello')`;
-  };
+    router.push(context.url);
+    context.meta = app.$meta();
 
-  return app;
+    context.appendHtml = () => {
+      const { title, link, style, script, noscript, meta } = context.meta.inject();
+
+      const body = script?.text({ body: true });
+      const head = [meta, title, link, style, noscript].reduce(
+        (acc, crr) => (acc += crr ? crr.text() : ''),
+        ''
+      );
+
+      return { head, body };
+    };
+
+    resolve(app);
+  });
 };

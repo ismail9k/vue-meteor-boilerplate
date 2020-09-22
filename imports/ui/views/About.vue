@@ -1,13 +1,13 @@
 <template>
-  <div>Home</div>
+  <div>About</div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'About',
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'Home',
+    title: 'About',
   },
 };
 </script>
