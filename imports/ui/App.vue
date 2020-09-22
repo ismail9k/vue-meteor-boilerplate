@@ -1,7 +1,5 @@
 <template>
-  <div>
-    Hello Vue
-  </div>
+  <div>Hello Vue</div>
 </template>
 
 <script>

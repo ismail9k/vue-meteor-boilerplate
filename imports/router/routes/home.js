@@ -4,9 +4,8 @@ export default [
   {
     path: '/',
     alias: '/home',
-    redirect: '/products',
     name: 'home',
     component: Home,
-    meta: { requiresAuth: true },
+    meta: { public: true },
   },
 ];
