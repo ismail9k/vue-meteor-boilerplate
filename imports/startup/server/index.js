@@ -5,6 +5,8 @@ VueSSR.createApp = function (context) {
   return new Promise(resolve => {
     const { app, router } = CreateApp();
 
+    delete app.el;
+
     router.push(context.url);
     context.meta = app.$meta();
 
