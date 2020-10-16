@@ -16,7 +16,7 @@ Meteor.startup(() => {
     if (!Accounts.loginServicesConfigured()) return;
 
     // init the app
-    setTimeout(CreateApp);
+    setTimeout(() => CreateApp().app.$mount('#app'));
 
     // terminate the tracker to prevent side-effects
     computation.stop();

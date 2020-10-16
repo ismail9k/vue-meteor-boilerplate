@@ -21,7 +21,6 @@ if (process.env.NODE_ENV === 'production') {
 function CreateApp() {
   return {
     app: new Vue({
-      el: '#app',
       router,
       store,
       ...App,
