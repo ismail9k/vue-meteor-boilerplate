@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 const bus = new Vue();
 
-Vue.use(function install(Vue) {
+Vue.use(function install(_Vue: typeof Vue) {
   Vue.prototype.$bus = bus;
 });
 

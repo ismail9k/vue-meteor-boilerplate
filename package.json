@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.8.3",
+    "@types/meteor": "^1.4.64",
     "meteor-node-stubs": "^1.0.0",
+    "typescript": "^4.1.2",
     "vue": "^2.6.11",
     "vue-meta": "^2.4.0",
     "vue-meteor-tracker": "^2.0.0-beta.5",
@@ -32,9 +34,9 @@
   },
   "meteor": {
     "mainModule": {
-      "client": "client/main.js",
-      "server": "server/main.js"
+      "client": "client/main.ts",
+      "server": "server/main.ts"
     },
-    "testModule": "tests/main.js"
+    "testModule": "tests/main.ts"
   }
 }

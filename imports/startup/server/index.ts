@@ -1,7 +1,7 @@
 import { VueSSR } from 'meteor/akryum:vue-ssr';
 import CreateApp from '/imports/app';
 
-VueSSR.createApp = function (context) {
+VueSSR.createApp = function (context: { [key: string]: any; }) {
   return new Promise(resolve => {
     const { app, router } = CreateApp();
 
