@@ -1,4 +1,4 @@
-import { MutationPayload } from "vuex";
+import { MutationPayload } from 'vuex';
 
 type User = {
   [key: string]: any;
@@ -11,15 +11,15 @@ const state: State = {
   user: null,
 };
 const getters = {
-  user(state: State) {
+  user(state: State): null | User {
     return state.user;
   },
 };
 const mutations = {
-  updateUser(state: State, payload: MutationPayload) {
+  updateUser(state: State, payload: MutationPayload): void {
     state.user = payload;
   },
-  logout(state: State) {
+  logout(state: State): void {
     state.user = null;
   },
 };

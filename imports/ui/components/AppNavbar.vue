@@ -11,8 +11,10 @@
 <script>
 export default {
   name: 'AppNavbar',
-  data: () => ({
-    routes: ['home', 'about'],
-  }),
+  data() {
+    return {
+      routes: ['home', 'about'],
+    };
+  },
 };
 </script>

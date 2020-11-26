@@ -21,9 +21,9 @@ if (process.env.NODE_ENV === 'production') {
  * Create App instance
  */
 function CreateApp(): {
-  app: Vue,
-  router: VueRouter,
-  store: Store<any>,
+  app: Vue;
+  router: VueRouter;
+  store: Store<any>;
 } {
   return {
     app: new Vue({

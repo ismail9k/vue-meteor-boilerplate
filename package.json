@@ -4,7 +4,7 @@
   "scripts": {
     "start": "meteor run",
     "prestart": "npm run lint --silent",
-    "lint": "eslint --ext .vue,.js imports client server",
+    "lint": "eslint --ext .vue,.ts,.js imports client server",
     "lint:fix": "npm run lint -- --fix",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
@@ -15,7 +15,7 @@
     "@types/meteor": "^1.4.64",
     "meteor-node-stubs": "^1.0.0",
     "typescript": "^4.1.2",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-meta": "^2.4.0",
     "vue-meteor-tracker": "^2.0.0-beta.5",
     "vue-router": "^3.3.4",
@@ -23,20 +23,22 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^6.11.0",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.15.0",
     "eslint-import-resolver-meteor": "^0.4.0",
     "eslint-plugin-meteor": "^7.0.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-vue": "^6.2.2",
-    "prettier": "^2.0.5"
+    "eslint-plugin-vue": "^7.0.0",
+    "prettier": "^2.2.0"
   },
   "meteor": {
     "mainModule": {
       "client": "client/main.ts",
       "server": "server/main.ts"
     },
-    "testModule": "tests/main.ts"
+    "testModule": "tests/main.js"
   }
 }
