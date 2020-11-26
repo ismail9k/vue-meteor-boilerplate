@@ -1,6 +1,6 @@
-# Vue, Meteor, SSR Boilerplate
+# Vue, Meteor, SSR, Typescript Boilerplate
 
-This is a full stack webapp boilerplate project with VueJS + MeteorJS + SRR.
+This is a full stack webapp boilerplate project with VueJS + MeteorJS + SRR + Typescript.
 
 ## Features
 
@@ -10,5 +10,5 @@ This is a full stack webapp boilerplate project with VueJS + MeteorJS + SRR.
 * [x] [Vue-router](https://github.com/vuejs/vue-router)
 * [x] [Vue-meta](https://vue-meta.nuxtjs.org/)
 * [x] [Vue-ssr](https://github.com/meteor-vue/vue-meteor/tree/master/packages/vue-ssr)
-* [ ] [Typescript](https://github.com/microsoft/TypeScript)
+* [x] [Typescript](https://github.com/microsoft/TypeScript)
 
